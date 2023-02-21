@@ -4,7 +4,6 @@ const clearBtn = document.getElementById("clear");
 let num1 = null;
 let num2 = null;
 let mainOperator = null;
-console.log("render");
 //Handle Clicks on Operators and Numbers
 document.addEventListener("click", handleClick);
 function handleClick(e) {
