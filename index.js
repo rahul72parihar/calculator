@@ -41,7 +41,6 @@ function addToSecond(digit) {
   }
   display.textContent = `${num1} ${mainOperator} ${num2}`;
 }
-
 function handleOperator(operator) {
   if (!isFirstNumberAdded()) {
     renderWarning();
