@@ -15,16 +15,15 @@ function handleClick(e) {
   }
 }
 function handleNumber(digit) {
-  if (isFirstAdded()) {
+  if (isFirstEmpty()) {
     addToFirst(digit);
   } else {
     addToSecond(digit);
   }
 }
 //return which number to add the current digit
-function isFirstAdded() {
-  if (mainOperator === null) return true;
-  return false;
+function isFirstEmpty() {
+  return mainOperator === null;
 }
 function addToFirst(digit) {
   if (num1 === null) num1 = digit;
@@ -90,5 +89,5 @@ function handleEqual() {
 clearBtn.addEventListener("click", handleClear);
 function handleClear() {
   [num1, num2, mainOperator] = [null, null, null];
-  display.textContent = 0;
+  display.textContent = "Enter";
 }
